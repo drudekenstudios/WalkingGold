@@ -1,3 +1,23 @@
 name: WalkingGold
 version: 1.0
 main: com.drudekenstudios.walkinggold.WalkingGold
+
+commands:
+    on:
+       description: This turns the Walking Gold ability on.
+       usage: /<command>
+       permission: WalkingGold.on
+       permission-message: You are not worthy of Gold!   
+
+permissions:
+    WalkingGold.*:
+        description: Gives access to all WalkingGold commands
+        children:
+            WalkingGold.on: true
+            WalkingGold.off: true
+    WalkingGold.on:
+        description: Allows user to make a user walk on gold.
+        default: op
+    WalkingGold.off:
+        description: Allows user to stop a user from walking on gold.
+        default: op
